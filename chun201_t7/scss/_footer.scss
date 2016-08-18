@@ -1,0 +1,107 @@
+footer {
+  background-color: $red;
+  padding: 25px 0;
+  .footer_logo {
+  }
+  .footer_nav {
+    ul li a {
+      @include fontset(16px, "Quicksand", #fff, 28px);
+      &:hover, &:focus {
+        transition-duration: 1s;
+        @include fontset(18px, "Quicksand", #fff, 28px);
+        font-weight: bold;
+        text-shadow: 1px 1px 2px;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer_social {
+    ul {
+      li {
+        a {
+          display: block;
+          width: 28px;
+          height: 28px;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+        &:nth-child(1) a{
+            background: url(../img/footericon.png) top left;
+        }
+        &:nth-child(2) a{
+            background: url(../img/footericon.png) top center;
+        }
+        &:nth-child(3) a{
+            background: url(../img/footericon.png) top right;
+        }
+      }
+    }
+  }
+}
+
+/*=============== RWD ===============*/
+  /*----- xs:768↓（480~768） -----*/
+@media (max-width:767px){
+  footer {
+    background-color: $red;
+    padding: 25px 0;
+    .footer_logo {
+      text-align: center;
+    }
+    .footer_nav {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .footer_social {
+      text-align: center;
+    }
+  }
+}
+
+  /*----- sm:768~991 -----*/
+@media (min-width:768px) and (max-width:991px){
+  footer {
+    background-color: $red;
+    padding: 25px 0;
+    .footer_logo {
+      text-align: center;
+    }
+    .footer_nav {
+      margin: 10px 0;
+      text-align: center;
+    }
+    .footer_social {
+      text-align: center;
+    }
+  }
+}
+
+  /*----- md:992~1199 -----*/
+@media (min-width:992px) and (max-width:1199px){
+  footer {
+    background-color: $red;
+    padding: 25px 0;
+    .footer_logo {
+      text-align: center;
+    }
+    .footer_nav {
+      margin: 10px 0;
+      text-align: center;
+      ul li a {
+        @include fontset(20px, "Quicksand", #fff, 28px);
+        &:hover, &:focus {
+          @include fontset(24px, "Quicksand", #fff, 28px);
+        }
+      }
+    }
+    .footer_social {
+      text-align: center;
+    }
+  }
+}
+
+  /*----- lg:1200↑ -----*/
+@media (min-width:1200px){
+
+}

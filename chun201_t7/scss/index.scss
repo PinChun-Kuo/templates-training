@@ -1,0 +1,372 @@
+@import "commonuse";
+
+/*----------  filter  ----------*/
+.filter {
+  .filter_title {
+    background-color: #000;
+    padding: 5px;
+    margin-left: 10px;
+    width: 90px;
+    @include fontset(16px, "Quicksand", #fff, 20px);
+    letter-spacing: 2px;
+  }
+  .filter_text {
+    background-color: #fff;
+    margin: 0;
+    h3 {
+      margin: 30px 0 10px 0;
+      @include fontset(22px, "Quicksand", #000, 24px);
+      font-weight: bold;
+    }
+    h4 {
+      margin: 15px 0 0 0;
+      @include fontset(16px, "Quicksand", $red, 16px);
+    }
+    h5 {
+      margin: 5px 0 0 0;
+      @include fontset(14px, "Quicksand", #000, 14px);
+      a {
+        @include fontset(14px, "Quicksand", #000, 14px);
+        i {
+          margin: 5px 0;
+        }
+        &:hover {
+          @include fontset(14px, "Quicksand", $red, 14px);
+          text-decoration: none;
+        }
+        &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+    .brand {
+      .block {
+        a {
+          @include fontset(14px, "Quicksand", #000, 14px);
+          &:hover, &:focus {
+            transition-duration: 1s;
+            @include fontset(16px, "Quicksand", $red, 16px);
+            font-weight: bold;
+            text-decoration: none;
+          }
+        }
+        &:nth-child(1) {
+          border-right: 1px solid #CECECE;
+        }
+      }
+    }
+    .size {
+      figure {
+        img {
+          border-radius: 100%;
+        }
+        figcaption img {
+          display: none;
+          width: 60%;
+          position: absolute;
+          top: 30%;
+          left: 20%;
+        }
+        &:hover {
+          figcaption img {
+            display: block;
+          }
+        }
+      }
+    }
+    .color {
+      .color_list {
+        ul {
+          margin-left: 0;
+          li {
+            width: 20px;
+            height: 20px;
+            &:hover {
+              transform: scale(1.2);
+            }
+            &:nth-child(1), &:nth-child(11), &:nth-child(21), &:nth-child(31) {
+              background-color: #F9A058;
+            }
+            &:nth-child(2), &:nth-child(12), &:nth-child(22), &:nth-child(32) {
+              background-color: #E82026;
+            }
+            &:nth-child(3), &:nth-child(13), &:nth-child(23), &:nth-child(33){
+              background-color: #da486b;
+            }
+            &:nth-child(4), &:nth-child(14), &:nth-child(24), &:nth-child(34) {
+              background-color: #9a4c8a;
+            }
+            &:nth-child(5), &:nth-child(15), &:nth-child(25), &:nth-child(35) {
+              background-color: #610B0E;
+            }
+            &:nth-child(6), &:nth-child(16), &:nth-child(26), &:nth-child(36) {
+              background-color: #5e2347;
+            }
+            &:nth-child(7), &:nth-child(17), &:nth-child(27) {
+              background-color: #3e7acb;
+            }
+            &:nth-child(8), &:nth-child(18), &:nth-child(28) {
+              background-color: #3caf9c;
+            }
+            &:nth-child(9), &:nth-child(19), &:nth-child(29) {
+              background-color: #1B334C;
+            }
+            &:nth-child(10), &:nth-child(20), &:nth-child(30) {
+              background-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------  product  ----------*/
+.product {
+  margin-top: 30px;
+  h2 {
+    @include fontset(36px, "Quicksand", #000, 36px);
+  }
+  h4 {
+    margin-bottom: 10px;
+    @include fontset(20px, "Quicksand", #000, 20px);
+  }
+  .product_img {
+    img {
+      border: 1px solid #aaa;
+      margin-bottom: 10px;
+    }
+    .product_img_list {
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+      &:nth-child(3) {
+        padding-left: 0;
+        position: relative;
+        left: 7px;
+      }
+      &:nth-child(4) {
+        padding-right: 0;
+      }
+    }
+  }
+  .product_info {
+    padding-left: 40px;
+    .product_evaluation {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #aaa;
+      .price {
+        .original_price {
+          float: right;
+          background-color: $red;
+          padding: 5px 15px;
+          @include fontset(32px, "Quicksand", #fff, 32px);
+          text-decoration: line-through;
+        }
+        .after-original_price {
+          clear: both;
+        }
+        .sale_price {
+          background-color: #fff;
+          padding: 5px 10px;
+          margin-top: 10px;
+          width: 100%;
+          @include fontset(44px, "Quicksand", #000, 44px);
+        }
+      }
+      .pig {
+        h5 {
+          @include fontset(16px, "Quicksand", #000, 28px);
+          span {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    .product_detail {
+      padding-top: 15px;
+      @include fontset(14px, "Quicksand", #000, 18px);
+    }
+    .product_shopping {
+      padding-top: 15px;
+      @include fontset(16px, "Quicksand", #000, 18px);
+      i {
+        color: $red;
+      }
+      .shopping_detail {
+        padding-top: 15px;
+        position: relative;
+        h5 {
+          @include fontset(16px, "Quicksand", #000, 28px);
+        }
+        select {
+          padding: 5px;
+          border-radius: 5px;
+        }
+        .shopping_size {
+          position: absolute;
+          right: 100px;
+        }
+        .purchase {
+          padding-top: 15px;
+          a {
+            @include fontset(24px, "Quicksand", #fff, 28px);
+            button {
+              background-color: $red;
+              padding: 5px 20px;
+              border-radius: 10px;
+            }
+            i {
+              color: #fff;
+            }
+            &:hover button{
+              transition-duration: 1s;
+              background-color: #28527b;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+    .product_social {
+      padding-top: 15px;
+      @include fontset(16px, "Quicksand", #000, 18px);
+      .social_img ul{
+        padding-top: 10px;
+        li {
+          padding: 0 0 0 5px;
+          a {
+            display: block;
+            width: 28px;
+            height: 28px;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+          &:nth-child(1) a{
+              background: url(../img/social.png) top left;
+          }
+          &:nth-child(2) a{
+              background: url(../img/social.png) top center;
+          }
+          &:nth-child(3) a{
+              background: url(../img/social.png) top right;
+          }
+          &:nth-child(4) a{
+              background: url(../img/social.png) bottom left;
+          }
+          &:nth-child(5) a{
+              background: url(../img/social.png) bottom center;
+          }
+          &:nth-child(6) a{
+              background: url(../img/social.png) bottom right;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*----------  description  ----------*/
+.description {
+  margin-top: 30px;
+  ul {
+    margin-left: 0;
+    li {
+      background-color: #fff;
+      padding: 8px 10px;
+      border-radius: 5px;
+      a {
+        @include fontset(13px, "Quicksand", #000, 20px);
+        letter-spacing: 1px;
+      }
+      &:hover, &:focus {
+        background-color: #28527b;
+        a {
+          transition-duration: 1s;
+          @include fontset(15px, "Quicksand", #fff, 20px);
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .description_text {
+    background-color: #fff;
+    padding: 20px 15px 0px 15px;
+    border: 1px solid #aaa;
+    h5 {
+      @include fontset(24px, "Quicksand", #000, 24px);
+      font-weight: bold;
+    }
+    h6 {
+      @include fontset(20px, "Quicksand", $red, 20px);
+      font-weight: bold;
+    }
+    p {
+      margin: 10px 0 30px 0;
+      @include fontset(16px, "Quicksand", #000, 20px);
+    }
+  }
+}
+
+/*=============== RWD ===============*/
+  /*----- xs:768↓（480~768） -----*/
+@media (max-width:767px){
+  .filter {
+    .filter_text {
+      .color h3{
+        text-align: center;
+      }
+    }
+  }
+  .product {
+    .product_info {
+      padding-left: 15px;
+      margin-top: 15px;
+      .product_evaluation {
+        .price {
+          .original_price {
+            float: none;
+            margin-top: 10px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+  /*----- sm:768~991 -----*/
+@media (min-width:768px) and (max-width:991px){
+  .filter {
+    .filter_text {
+      .color h3{
+        text-align: center;
+      }
+    }
+  }
+  .product {
+    .product_info {
+      .product_evaluation {
+        .price {
+          .original_price {
+            float: none;
+            margin-top: 10px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+  /*----- md:992~1199 -----*/
+@media (min-width:992px) and (max-width:1199px){
+
+}
+
+  /*----- lg:1200↑ -----*/
+@media (min-width:1200px){
+
+}
